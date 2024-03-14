@@ -1,0 +1,71 @@
+# Project: Project2
+# Makefile created by Red Panda C++ 2.25.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = Project2_private.res
+OBJ      = Administrator.o file.o Teacher.o UI.o Tea.o Admin\ other.o Student.o Stu.o Judge.o Creatre.o others.o Admin1.o main.o $(RES)
+LINKOBJ  = Administrator.o file.o Teacher.o UI.o Tea.o "Admin other.o" Student.o Stu.o Judge.o Creatre.o others.o Admin1.o main.o Project2_private.res
+CLEANOBJ  =  Administrator.o file.o Teacher.o UI.o Tea.o "Admin other.o" Student.o Stu.o Judge.o Creatre.o others.o Admin1.o main.o  Project2_private.res Project2.exe
+LIBS     = 
+INCS     =  
+CXXINCS  =  
+BIN      = Project2.exe
+CXXFLAGS = $(CXXINCS)  -g3 -pipe -Wall -D__DEBUG__
+CFLAGS   = $(INCS)  -g3 -pipe -Wall -D__DEBUG__
+RM       = del /q /f
+WINDRESFLAGS  = 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	-$(RM) $(CLEANOBJ) > NUL 2>&1
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Administrator.o: Administrator.c
+	$(CC) -c Administrator.c -o Administrator.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+file.o: file.c
+	$(CC) -c file.c -o file.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+Teacher.o: Teacher.c
+	$(CC) -c Teacher.c -o Teacher.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+UI.o: UI.c
+	$(CC) -c UI.c -o UI.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+Tea.o: Tea.c
+	$(CC) -c Tea.c -o Tea.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+Admin\ other.o: Admin\ other.c
+	$(CC) -c "Admin other.c" -o "Admin other.o" $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+Student.o: Student.c
+	$(CC) -c Student.c -o Student.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+Stu.o: Stu.c
+	$(CC) -c Stu.c -o Stu.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+Judge.o: Judge.c
+	$(CC) -c Judge.c -o Judge.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+Creatre.o: Creatre.c
+	$(CC) -c Creatre.c -o Creatre.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+others.o: others.c
+	$(CC) -c others.c -o others.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+Admin1.o: Admin1.c
+	$(CC) -c Admin1.c -o Admin1.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+Project2_private.res: Project2_private.rc 
+	$(WINDRES) -i Project2_private.rc --input-format=rc -o Project2_private.res -O coff $(WINDRESFLAGS) 
+

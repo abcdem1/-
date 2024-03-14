@@ -1,0 +1,39 @@
+{
+    "breakpoints": [
+        {
+            "breakpoint_type": 0,
+            "condition": "",
+            "enabled": true,
+            "filename": "Judge.c",
+            "line": 1,
+            "timestamp": "1708776243561"
+        },
+        {
+            "breakpoint_type": 0,
+            "condition": "",
+            "enabled": true,
+            "filename": "declaration.h",
+            "line": 4,
+            "timestamp": "1708788963908"
+        },
+        {
+            "breakpoint_type": 0,
+            "condition": "",
+            "enabled": true,
+            "filename": "Student.c",
+            "line": 73,
+            "timestamp": "1709373408200"
+        },
+        {
+            "breakpoint_type": 0,
+            "condition": "",
+            "enabled": true,
+            "filename": "Tea.c",
+            "line": 821,
+            "timestamp": "1709395969993"
+        }
+    ],
+    "timestamp": "1709730810897",
+    "watchvars": [
+    ]
+}
